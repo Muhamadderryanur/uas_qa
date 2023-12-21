@@ -17,7 +17,6 @@ def test_product_api(client):
 
 # post new cart
 def test_post_cart(client):
-    def test_post_cart(client):
     url = f"/api/cart"
     coupon_code = ""
     shipping_fee = 0
@@ -25,5 +24,5 @@ def test_post_cart(client):
     payload = {"coupon_code": coupon_code, "shipping_fee": shipping_fee, "cart_items": cart_items}
     response = client.post(url, json=payload)
     assert response.status_code == 200
-    if response.status_code == 200:  assert "data created"
+    if response.status_code == 200:  assert "data created"
 
